@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continuous Object Swipe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 2em;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: pink;
+      margin-bottom: 20px;
+    }
+
+    .numberDiv {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      line-height: 200px;
+      color: white;
+      font-weight: bold;
+      transition: all 0.5s ease;
+      /* Smooth transition for style changes */
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    .numberDiv img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    /* Custom styles for the three colors */
+    .black {
+      background-color: black;
+    }
+
+    .pink {
+      background-color: pink;
+      transform: scale(1.1);
+    }
+
+    /* Only div2 will always be scaled */
+    .yellow {
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="heading">Student</h1> <!-- The heading initially reflects the name in div2 -->
+
+  <div id="div1" class="numberDiv">
+    <img src="" alt="Teacher">
+    Teacher
+  </div>
+  <div id="div2" class="numberDiv pink"> <!-- Added the pink class here to ensure scaling -->
+    <img src="https://cdn.pixabay.com/photo/2021/05/18/00/39/student-6275149_960_720.png" alt="Student">
+    Student
+  </div>
+  <div id="div3" class="numberDiv">
+    <img src="https://cdn.pixabay.com/photo/2019/03/05/12/28/policeman-4038316_960_720.png" alt="Police">
+    Police
+  </div>
+
+  <script>
+    // Object with names and image URLs
+    let obj = {
+      Teacher: "./Task/Assets/Teacher.webp",
+      Student: "./Task/Assets/Student.webp",
+      Police: "./Task/Assets/Police.webp",
+      Beautician: "./Task/Assets/beautician.webp",
+      Doctor: "./Task/Assets/Doctor.webp",
+      Scientist: "./Task/Assets/scientist.webp",
+      Painter: "./Task/Assets/Painter.webp"
+    };
+
+    // Create an array from the keys of the object to cycle through
+    const keys = Object.keys(obj);
+
+    // Styles for the divs (black, pink, yellow)
+    const styles = ['black', 'pink', 'yellow'];
+
+    let currentIndex = 0;
+
+    // Function to cycle through numbers and styles
+    function swipeNext() {
+      // Get the current style index
+      const styleIndex = currentIndex % styles.length;
+
+      // Get the current key for cycling
+      const currentKey = keys[currentIndex % keys.length];
+      console.log(currentKey)
+      const nextKey = keys[(currentIndex + 1) % keys.length];
+      const nextNextKey = keys[(currentIndex + 2) % keys.length];
+
+      // Update divs with the names and images
+      const card1 = document.getElementById("div1").innerHTML = `<img src="${obj[currentKey]}" alt="${currentKey}"> ${currentKey}`;
+      console.log(obj[currentKey])
+      document.getElementById("div1").className = `numberDiv ${styles[styleIndex]}`;
+
+      document.getElementById("div2").innerHTML = `<img src="${obj[nextKey]}" alt="${nextKey}"> ${nextKey}`;
+      document.getElementById("div2").className = `numberDiv pink`;  // Ensure pink class for scaling
+
+      document.getElementById("div3").innerHTML = `<img src="${obj[nextNextKey]}" alt="${nextNextKey}"> ${nextNextKey}`;
+      document.getElementById("div3").className = `numberDiv ${styles[(styleIndex + 2) % styles.length]}`;
+
+      // Update the heading with the name in div2
+      document.getElementById("heading").textContent = nextKey;
+
+      // Increment the current index
+      currentIndex = (currentIndex + 1) % keys.length;
+    }
+
+    // Call swipeNext every 1 second (1000 milliseconds)
+    setInterval(swipeNext, 1000);
+  </script>
+</body>
+
+</html>

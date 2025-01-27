@@ -1,0 +1,1076 @@
+<script>
+  // How would you create a Person class with properties like name and age and a method to display the person's details?
+
+  // class Person{
+  //   constructor(name,age){
+  //     this.name=name;
+  //     this.age=age;
+  //   }
+
+  //   display(){
+  //     console.log(`Name is ${this.name} and age is ${this.age}`);
+  //   }
+  // }
+
+  // const obj=new Person("John",35);
+  // obj.display();
+
+  // How can you create a Book class that has properties like title, author, and pages and a method to display book information?
+
+  // class Book{
+  //   constructor(title,author,pages){
+  //     this.title=title;
+  //     this.author=author;
+  //     this.pages=pages;
+  //   }
+
+  //   display(){
+  //       console.log(`Title is : ${this.title}
+  //       Author is : ${this.author}
+  //       Pages are:${this.pages}`);
+  //   }
+
+  // }
+
+  // const obj=new Book("C","Elbert",7890);
+  // obj.display();
+
+  // How can you add a method to a Calculator class that performs addition, subtraction, multiplication, and division?
+
+  // class Calculator{
+  //   constructor(a,b){
+  //     this.a=a;
+  //     this.b=b;
+  //   }
+
+  //   add(){
+  //       return console.log(this.a+this.b);
+  //   }
+
+  //   sub(){
+  //       return console.log(this.a-this.b);
+  //   }
+  //   mul(){
+  //     return console.log(this.a*this.b);
+  //   }
+
+  //   divi(){
+  //     return console.log(this.a/this.b);
+  //   }
+  // }
+
+  // const obj=new Calculator(4,5);
+  // obj.add();
+  // obj.sub();
+  // obj.mul();
+  // obj.divi();
+
+  // class Calculator{
+  //   add(a,b){
+  //       return a+b;
+  //   }
+
+  //   sub(a,b){
+  //       return a-b;
+  //   }
+  //   mul(a,b){
+  //     return a*b;
+  //   }
+
+  //   divi(a,b){
+  //     return a/b;
+  //   }
+  // }
+
+  // const obj=new Calculator();
+
+  // x=obj.add(2,6);
+  // console.log(`x:${x}`);
+
+  // y=obj.sub(4,2);
+  // console.log(`y:${y}`);
+
+  // z=obj.mul(5,6);
+  // console.log(`z: ${z}`);
+
+  // a=obj.divi(9,3);
+  // console.log(`a: ${a}`)
+
+  // How would you create a Student class with properties for name, grade, and subject, and a method to show whether the student has passed or failed?
+
+  // class Student{
+  //   constructor(name,grade,subject){
+  //     this.name=name;
+  //     this.grade=grade;
+  //     this.subbject=subject;
+  //   }
+
+  //   display(){
+  //     if(this.grade=="A" || this.grade=="B" || this.grade=="C"){
+  //       return true;
+  //     }
+
+  //     else{
+  //       return false;
+  //     }
+  //   }
+  // }
+
+  // const obj=new Student("Jaish","D","C++");
+  // let result=obj.display();
+  // if(result==true){
+  //   console.log("Passed");
+  // }
+
+  // else{
+  //   console.log("failed")
+  // }
+
+  //   8.	Create a class  Acccount  for a account balance information that consist of following properties and methods of object
+  // a.	Properties : it hold the information about account
+  // i.	Balance
+  // b.	setdata;
+  // c.	withdrawal  amt): to withdrawal the amount
+  // d.	deposit(amt) :to deposit the amount
+  // e.	mybalance() : display current balance
+
+  // class Account{
+  //   constructor(name,balance){
+  //     this.name=name;
+  //     this.balance=balance;
+  //   }
+
+  //   setData(amt){
+  //     this.balance=amt;
+  //   }
+
+  //   withdrawal(amt){
+  //     this.balance-=amt;
+  //   }
+
+  //   deposit(amt){
+  //     this.balance+=amt;
+  //   }
+
+  //   myBalance(){
+  //     return this.balance;
+  //   }
+  // }
+
+  // const obj=new Account();
+  // obj.setData(3000);
+  // obj.withdrawal(1000);
+  // obj.deposit(5000);
+
+  // const show=obj.myBalance();
+  // console.log(`balance is: ${show}`)
+
+  // 10.	Create a class  Complex  for a complex number information that consist of following properties and methods of object
+  // a.	Properties: hold the information of complex value.
+  // i.	real
+  // ii.	image
+  // b.	setData method that set the properties of object using parameters
+  // c.	getdata method that take real and image then store into the properties of object
+  // d.	display method print the properties of object.
+  // e.          add method to add two complex number
+
+  // class Complex {
+  //   constructor(real, image) {
+  //     this.real = real;
+  //     this.image = image;
+  //   }
+
+  //   getData(real, image) {
+  //     this.real = real;
+  //     this.image = image;
+  //   }
+
+  //   add(c2) {
+  //     const temp = new Complex(0, 0);
+  //     temp.real = this.real + c2.real;
+  //     temp.image = this.image + c2.image;
+  //     return temp;
+  //   }
+
+  //   display() {
+  //     return console.log(this.real + "+" + this.image + "i");
+  //   }
+  // }
+
+  // const c1 = new Complex(10, 12);
+  // const c2 = new Complex(6, 7);
+  // const c3 = c1.add(c2);
+  // c3.display();
+
+  // 11.	Create a class  Date  for a date  information that consist of following properties and methods of object
+  // a.	Properties:
+  // i.	dd
+  // ii.	mm
+  // iii.	YY
+  // b.	setData method that set the properties of object using parameters.
+  // c.	getdata method that take date
+  // d.	display method print the date
+  // e.	Valid method to check whether date is valid or not it valid then return true otherwise false.
+
+  //   class Date{
+  //   constructor(dd,mm,yy){
+  //     this.dd=dd;
+  //     this.mm=mm;
+  //     this.yy=yy;
+  //   }
+
+  //   getData(){
+  //     this.dd=dd;
+  //     this.mm=mm;
+  //     this.yy=yy;
+  //   }
+
+  //   display(){
+  //     return console.log(`${this.dd}-${this.mm}-${this.yy}`)
+  //   }
+
+  //   check(){
+  //         if(this.yy>0){
+  //             if(this.mm==2){
+  //                 if (this.yy%4==0 & this.yy%100!=0 || this.yy%400==0) {
+  //                   if (this.dd>=1 && this.dd<=29) {
+  //                     return true;
+
+  //                   } else {
+  //                     return false;
+  //                   }
+
+  //                 } else {
+  //                   if (this.dd>=1 && this.dd<=28) {
+  //                     return true;
+  //                   } else {
+  //                     return false;
+  //                   }
+  //                 }
+  //             }
+  //             else if(this.mm==1 || this.mm==3 || this.mm==5 || this.mm==7 || this.mm==8 || this.mm==10 || this.mm==12){
+  //               if (this.dd>=1 && this.dd<=31) {
+  //                 return true;
+  //               } else {
+  //                 return false;
+  //               }
+
+  //             }
+
+  //             else if(this.mm==4 || this.mm==6 || this.mm==9 || this.mm==11){
+  //                 if (this.dd>=1 && this.dd<=30) {
+  //                   return true;
+  //                 } else {
+  //                   return false;
+  //                 }
+  //             }
+
+  //             else {
+  //               return false;
+  //             }
+
+  //         }
+  //         else{
+  //           return false;
+  //         }
+
+  //   }
+  // }
+
+  // const obj=new Date(29,2,2016);
+  // obj.display();
+  // const validity=obj.check();
+  // if(validity==true){
+  //   console.log("valid");
+  // }
+  // else{
+  //   console.log("Invalid")
+  // }
+
+
+
+  // 12.	Create a class  Time  for a time information that consist of following properties and methods of object
+  // a.	Properties: i.	hh ii.	mi iii.	ss
+  // b.	setData method that set the properties of object using parameters.
+  // c.	getdata method that take Hours , minites and second into the properties of object
+  // d.	display method print the properties of object.
+  // e.	Addtime method add two time objects return the new time object
+
+  // class Time{
+  //     constructor(hh,mi,ss) {
+  //       this.hh=hh;
+  //       this.mi=mi;
+  //       this.ss=ss;
+  //     }
+
+  //     setData(hh,mi,ss){
+  //       this.hh=hh;
+  //       this.mi=mi;
+  //       this.ss=ss;
+  //     }
+
+  //     addTime(c2){
+  //       const temp=new Time();
+  //       temp.hh=this.hh+c2.hh;
+  //       temp.mi=this.mi+c2.mi;
+  //       temp.ss=this.ss+c2.ss;
+
+  //       return temp;
+  //     }
+
+  //     display(){
+  //       if(this.ss>=60){
+  //         this.ss-=60;
+  //         this.mi++;;
+
+  //         if(this.mi>=60){
+  //           this.mi-=60;
+  //           this.hh++;
+  //         }
+  //       }
+
+  //       console.log(`${this.hh}:${this.mi}:${this.ss}`);
+  //     }
+  //   }
+
+  //   const c1=new Time(3,20,55);
+  //   const c2=new Time(2,50,20);
+  //   const c3=c1.addTime(c2);
+  //   c3.display();
+
+
+
+
+  // 11.	Create a class  Date  for a date  information that consist of following properties and methods of object
+  // // a.	Properties:
+  // // i.	dd
+  // // ii.	mm
+  // // iii.	YY
+  // // b.	setData method that set the properties of object using parameters.
+  // // c.	getdata method that take date
+  // // d.	display method print the date
+  // // e.	Valid method to check whether date is valid or not it valid then return true otherwise false.
+  // // f. add 5 days indo date
+
+  //  class Date{
+  //   constructor(dd,mm,yy){
+  //     this.dd=dd;
+  //     this.mm=mm;
+  //     this.yy=yy;
+  //   }
+
+  //   getData(){
+  //     this.dd=dd;
+  //     this.mm=mm;
+  //     this.yy=yy;
+  //   }
+
+
+
+  //    check(){
+  //         if(this.yy>0){
+  //             if(this.mm==2){
+  //                 if (this.yy%4==0 & this.yy%100!=0 || this.yy%400==0) {
+  //                   if (this.dd>=1 && this.dd<=29) {
+  //                     return true;
+
+  //                   } else {
+  //                     return false;
+  //                   }
+
+  //                 } else {
+  //                   if (this.dd>=1 && this.dd<=28) {
+  //                     return true;
+  //                   } else {
+  //                     return false;
+  //                   }
+  //                 }
+  //             }
+  //             else if(this.mm==1 || this.mm==3 || this.mm==5 || this.mm==7 || this.mm==8 || this.mm==10 || this.mm==12){
+  //               if (this.dd>=1 && this.dd<=31) {
+  //                 return true;
+  //               } else {
+  //                 return false;
+  //               }
+
+  //             }
+
+  //             else if(this.mm==4 || this.mm==6 || this.mm==9 || this.mm==11){
+  //                 if (this.dd>=1 && this.dd<=30) {
+  //                   return true;
+  //                 } else {
+  //                   return false;
+  //                 }
+  //             }
+
+  //             else {
+  //               return false;
+  //             }
+
+  //         }
+  //         else{
+  //           return false;
+  //         }
+  //   }
+
+  //   addFive(){
+  //     if(this.check()==true){
+  //       this.dd+=5;
+  //       if(this.mm==2){
+  //         if(this.yy%4==0 && this.yy%100!=0 || this.yy%100==0){
+  //           if(this.dd>29){
+  //             this.dd-=29;
+  //             this.mm++;
+  //           }
+
+  //         }
+  //         else{
+  //           if(this.dd>28){
+  //             this.dd-=28;
+  //             this.mm++;
+  //           }
+  //         }
+  //       }
+
+  //       else if(this.mm==1 || this.mm==3 || this.mm==5 || this.mm==7 || this.mm==8 || this.mm==10 || this.mm==12){
+  //         if (this.dd>31) {
+  //           this.mm++;
+  //           this.dd-=31;
+  //           if(this.mm>12){
+  //             this.mm=1;
+  //             this.yy++;
+  //           }
+  //         }
+  //       }
+  //       else if(this.mm==4 || this.mm==6 || this.mm==9 || this.mm==11){
+  //         if(this.dd>30){
+  //           this.mm++;
+  //           this.dd-=30;
+
+  //         }
+  //       }
+  //       else{
+
+  //       }
+
+  //     }
+  //   }
+  //   display(){
+  //     return console.log(`${this.dd}-${this.mm}-${this.yy}`)
+  //   }
+  // }
+
+  // const obj=new Date(28,12,2015);
+  // obj.check();
+  // obj.display();
+  // obj.addFive();
+  // obj.display();
+
+
+
+
+  //new question
+
+
+  // class Book{
+  //   static total_price=0;
+  //   constructor(name,price){
+  //     this.name=name;
+  //     this.price=price;
+  //     Book.total_price+=price;
+  //   }
+
+  //   display(){
+  //     console.log(`Book Name: ${this.name} and Book Price is: ${this.price}`);
+  //   }
+
+  //   static price(){
+  //     console.log(`Static Total Price is:${Book.total_price}`)
+  //   }
+  // }
+
+  // const c1=new Book("C",8000);
+  // const c2=new Book("C++",9000);
+  // c1.display();
+  // c2.display();
+
+  // Book.price();
+
+
+
+
+
+  // Question 1: Building a Book Class
+  // Create a Book class with the following properties: title, author, and price.
+  // Write a constructor that initializes these properties.
+  // Add a method getDetails() that returns a string with the book's title, author, and price.
+
+  // class Book{
+  //   constructor(title,author,price){
+  //     this.title=title;
+  //     this.author=author;
+  //     this.price=price;
+  //   }
+
+  //   getDetails(){
+  //     console.log(`Title is: ${this.title}, Author is : ${this.author}, Price is : ${this.price}`);
+  //   }
+  // }
+
+  // const obj=new Book("Java","Herbert Schildt",2000);
+  // obj.getDetails();
+
+  // Question 2: Implementing a BankAccount Class with Instance Methods
+  // Create a BankAccount class with the following properties: accountNumber, accountHolder, and balance (default should be 0).
+  // Add methods deposit(amount) and withdraw(amount) that increase or decrease the balance respectively.
+  // Add an instance method getBalance() that returns the current balance
+
+  // class BankAccount{
+  //   constructor(accountNumber,accountHolderName,balance){
+  //     this.accountNumber=accountNumber;
+  //     this.accountHolderName=accountHolderName;
+  //     this.balance=balance;
+  //     this.balance=0;
+  //   }
+
+  //   deposit(amt){
+  //     this.balance+=amt;
+  //   }
+
+  //   withdraw(amt){
+  //     this.balance-=amt;
+  //   }
+  //   getBalance(){
+  //     console.log(this.balance);
+  //   }
+  // }
+
+  // const obj=new BankAccount(2139879,"jaishree");
+  // obj.deposit(5000);
+  // obj.withdraw(1000);
+  // obj.getBalance();
+
+  // Question 3: Adding Static Members to Count Instances
+  // Modify the BankAccount class from Question 2.
+  // Add a static property totalAccounts that counts the number of instances of BankAccount.
+  // Add a static method getTotalAccounts() that returns the current value of totalAccounts
+
+  // class BankAccount{
+  //   static totalAccounts=0;
+  //   constructor(name,accNum){
+  //     this.name=name;
+  //     this.accNum=accNum;
+  //    BankAccount.totalAccounts++;
+  //   }
+
+  //   static total(){
+  //     console.log(BankAccount.totalAccounts)
+  //   }
+
+  // }
+
+  // const a1=new BankAccount("jais",898);
+  // const a2=new BankAccount("jais",898);
+  // const a3=new BankAccount("jais",898);
+  // const a4=new BankAccount("jais",898);
+  // const a5=new BankAccount("jais",898);
+  // const a6=new BankAccount("jais",898);
+
+  // BankAccount.total();
+
+  // Question 4: Creating a Student Class with Getters and Setters
+  // Create a Student class with properties name and grade.
+  // Write a constructor to initialize these properties.
+  // Use getters and setters for the grade property to ensure that it is a number between 0 and 100.
+  // Add a method isPassing() that returns true if the grade is 60 or above, and false otherwise.
+
+
+
+  // Question 5: Implementing Inheritance in a Shape Class
+  // Create a Shape class with a method getType() that returns the string "Shape".
+  // Create a Rectangle class that extends Shape, with properties width and height.
+  // Write a constructor in Rectangle that initializes width and height.
+  // Add a method getArea() to the Rectangle class that calculates and returns the area of the rectangle.
+  // Override the getType() method in Rectangle to return "Rectangle"
+
+  // Question 6: Static Method to Convert Temperature
+  // Create a TemperatureConverter class with static methods to convert temperatures.
+  // Add a static method celsiusToFahrenheit(celsius) that takes a temperature in Celsius and returns it in Fahrenheit.
+  // Add a static method fahrenheitToCelsius(fahrenheit) that takes a temperature in Fahrenheit and returns it in Celsius.
+
+  // class TempConvert{
+  //   static celsiusToFahrenheit(celsius){
+  //    return (celsius*(9/5)+32);
+  //   }
+
+  //   static fahrenheitToCelsius(fahrenheit){
+  //     return ((fahrenheit-32)*(5/9));
+  //   }
+  //   }
+
+  //   console.log(TempConvert.celsiusToFahrenheit(30));
+  //   console.log(TempConvert.fahrenheitToCelsius(20));
+
+  // Question 7: Creating a Library with Books (Using Composition)
+  // Create a Library class that holds an array of Book objects.
+  // Write a method addBook(book) to add a Book object to the library.
+  // Write a method findBookByTitle(title) that returns a book object matching the title.
+  // Write a static method compareBooksByPrice(book1, book2) that compares two books and returns the book with the higher price.
+
+
+
+
+
+
+
+
+
+  //   1. Basic Class Creation
+  // Create a Person class with the following properties and methods:
+  // Properties: name (string), age (number)
+  // Methods:
+  // greet() - Logs "Hello, my name is <name> and I am <age> years old." to the console.
+  // Instantiate an object of Person with your name and age, and call the greet method.
+
+  // class Person{
+  //   constructor(name,age){
+  //     this.name=name;
+  //     this.age=age;
+  //   }
+
+  //   greet(){
+  //     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+  //   }
+  // }
+
+  // const obj=new Person("Jais",26);
+  // obj.greet();
+
+
+
+  // 2. Inheritance Basics
+  // Create a class Student that inherits from Person.
+  // Add a new property, grade (string), to the Student class and initialize it via the constructor.
+  // Override the greet() method in Student to include the student’s grade in the greeting.
+  // Expected output: "Hello, my name is <name>, I am <age> years old and I am in grade <grade>."
+  // Create a Student object and call the greet method.
+
+
+  // class Person{
+  //   constructor(name,age){
+  //     this.name=name;
+  //     this.age=age;
+  //   }
+
+  //   greet(){
+  //     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+  //   }
+  // }
+
+  // class Student extends Person{
+  //   constructor(name,age,grade){
+  //     super(name,age);
+  //     this.grade=grade;
+  //   }
+
+  //   greet(){
+  //     // super.greet();
+  //     console.log(`Hello, my name is ${this.name}, I am ${this.age} years old and grade is ${this.grade}`)
+  //   }
+  // }
+
+  // let obj=new Student("Jais",26,"C");
+  // obj.greet();
+
+
+
+
+
+  // 3. Method Overriding with Super Keyword
+  // Update the greet method in the Student class to use the super keyword to call the greet method of the Person class first, then add the grade information afterward.
+
+  // class Person{
+  //   constructor(name,age){
+  //     this.name=name;
+  //     this.age=age;
+  //   }
+
+  //   greet(){
+  //     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+  //   }
+  // }
+  // class Student extends Person{
+  //   constructor(name,age,grade){
+  //     super(name,age);
+  //     this.grade=grade;
+  //   }
+
+  //   greet(){
+  //     super.greet();
+  //     console.log(`grade is ${this.grade}`)
+  //   }
+  // }
+  // let obj=new Student("Jais",26,"C");
+  // obj.greet();
+
+
+  // 4. Static Methods
+  // Add a static method introduce() in the Person class that logs "This is the Person class."
+  // Try calling introduce() on both Person and an instance of Person to understand how static methods behave in JavaScript.
+
+  //  class Person{
+  //   constructor(name,age){
+  //     this.name=name;
+  //     this.age=age;
+  //   }
+
+  //   greet(){
+  //     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+  //   }
+
+  //   static introduce(){
+  //     console.log("This is the person class")
+  //   }
+  // }
+  // class Student extends Person{
+  //   constructor(name,age,grade){
+  //     super(name,age);
+  //     this.grade=grade;
+  //   }
+
+  //   greet(){
+  //     super.greet();
+  //     console.log(`grade is ${this.grade}`)
+  //   }
+  // }
+
+  // let obj2=new Student("Jais",26,"C");
+  // obj2.greet();
+  // Student.introduce();
+  // Person.introduce();
+
+
+
+
+  // 5. Getter and Setter Methods
+  // Add a getter method info in the Student class that returns a string "Student: <name>, Age: <age>, Grade: <grade>".
+  // Add a setter method for grade in Student that updates the student's grade and logs "Grade updated to <new grade>".
+  // Demonstrate the use of the getter and setter by creating a Student object, retrieving the info, updating the grade, and retrieving the info again.
+
+
+
+  // class Student{
+  //   constructor(name,age,grade){
+  //     this.name=name;
+  //     this.age=age;
+  //     this.grade="A";
+  //   }
+
+  //   get name(){
+  //     return this._name;
+  //   }
+
+  //   set name(name){
+  //     this._name=name;
+  //   }
+
+  //   get age(){
+  //     return this._age;
+  //   }
+
+  //   set age(age){
+  //     this._age=age;
+  //   }
+
+  //   get grade(){
+  //     return this._grade;
+  //   }
+
+  //   set grade(grade){
+  //     this._grade=grade;
+  //   }
+  // }
+
+  // const stu=new Student("Jaishree",26,"C");
+  // let g=stu._grade="B";
+  // console.log(g)
+
+
+  // 6. Inheritance Chain & Polymorphism
+  // Create a new class Teacher that also inherits from Person.
+  // Add a property subject (string) to Teacher and override the greet method to include "I teach <subject>."
+  // Demonstrate polymorphism by creating an array of Person objects that includes both Student and Teacher instances.
+  // Iterate over the array and call greet on each item, observing how the method behaves differently based on the object type.
+
+  //  class Person{
+  //   constructor(name,age){
+  //     this.name=name;
+  //     this.age=age;
+  //   }
+
+  //   greet(){
+  //     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+  //   }
+  // }
+
+  // class Student extends Person{
+  //   constructor(name,age,grade){
+  //     super(name,age);
+  //     this.grade=grade;
+  //   }
+
+  //   greet(){
+  //     super.greet();
+  //     console.log(`Hello, my name is ${this.name}, I am ${this.age} years old and grade is ${this.grade}`)
+  //   }
+  // }
+
+  // class Teacher extends Person{
+  //   constructor(name,age,grade,subject) {
+  //     super(name,age,grade);
+  //     this.subject=subject;
+  //   }
+
+  //   greet(){
+  //     super.greet();
+  //     console.log(`I teach ${this.subject}`)
+  //   }
+  // }
+
+
+  // let arr=[new Student("Jaish",26,"A"),new Student("Shubhi",34,"B"),new Student("Kashish",26,"B"),new Teacher("Suman",56,"C","C++"),new Teacher("Sunita",34,"C","Java")];
+
+  // for(let i=0; i<arr.length; i++){
+  //   arr[i].greet();
+  // }
+
+  // arr.forEach(element => {
+  //   element.greet();
+  // });
+
+
+
+  // 7. Advanced: Implementing a Simple School System
+  // Create a School class with the following:
+  // A property name
+  // A property members (array) to hold both Student and Teacher objects.
+  // Methods:
+  // addMember(member) - Adds a Student or Teacher to the members array.
+  // listMembers() - Logs the details of each member in the school by calling their respective greet methods.
+  // Create a School object, add several Student and Teacher objects to it, and call listMembers() to see all members’ details.
+
+  //  class Person{
+  //   constructor(name,age){
+  //     this.name=name;
+  //     this.age=age;
+  //   }
+
+  //   greet(){
+  //     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+  //   }
+  // }
+
+  // class Student extends Person{
+  //   constructor(name,age,grade){
+  //     super(name,age);
+  //     this.grade=grade;
+  //   }
+
+  //   greet(){
+  //     super.greet();
+  //     console.log(`Hello, my name is ${this.name}, I am ${this.age} years old and grade is ${this.grade}`)
+  //   }
+  // }
+
+  // class Teacher extends Person{
+  //   constructor(name,age,grade,subject) {
+  //     super(name,age,grade);
+  //     this.subject=subject;
+  //   }
+
+  //   greet(){
+  //     super.greet();
+  //     console.log(`I teach ${this.subject}`)
+  //   }
+  // }
+
+  // class School extends Person{
+  //  constructor(name,member){
+  //   super('',0)
+  //   this.name=name;
+  //    this.member=[];
+  //  }
+
+  //   addMember(member){
+  //     this.member.push(member);
+  //   }
+
+  //   list(){
+  //       this.member.forEach(element => {
+  //         element.greet();
+  //       });
+  //       console.log(`List is : ${this.name}`)
+  //   }
+
+  // }
+
+  // const sch = new School("Gwalior Glory");
+
+  // const s1 = new Student("Jais", 16, "C");
+  // const s2 = new Student("Jais", 16, "C");
+  // const s3 = new Student("Jais", 16, "C");
+  // const s4 = new Student("Jais", 16, "C");
+  // const t1 = new Teacher("Suman", 45, "C++");
+  // const t2 = new Teacher("Suman", 45, "C++");
+  // const t3 = new Teacher("Suman", 45, "C++");
+  // const t4 = new Teacher("Suman", 45, "C++");
+  // const t5 = new Teacher("Suman", 45, "C++");
+
+
+  // sch.addMember(s1);
+  // sch.addMember(s2);
+  // sch.addMember(s3);
+  // sch.addMember(s4);
+  // sch.addMember(t1);
+  // sch.addMember(t2);
+  // sch.addMember(t3);
+  // sch.addMember(t4);
+
+  // sch.list();
+
+
+
+
+  // 8. Prototype and Class Syntax Comparison
+  // Write a Vehicle class using ES6 class syntax with a startEngine() method that logs "Engine started.".
+  // Rewrite the same Vehicle class using the prototype-based approach in JavaScript.
+  // Discuss or explain (in code comments) the main differences between the two approaches
+
+
+
+
+  // class Vehicle{
+  //   startEngine(){
+  //     console.log("Engine Started")
+  //   }
+  // }
+
+
+  // Object() constructor
+  // const obj = new Object(null);
+  // obj.value = 42;
+  // obj.name = "Jaishree";
+  // console.log(obj)
+  // const obj=new Object();
+
+
+  // let television = {
+  //   brand: "OnePlus",
+  //   Resolution: "8K",
+  //   Price: 30000,
+  //   "Display Technology": "LED",
+  // };
+
+  // let entries = Object.entries(television);
+  // console.log(entries);
+
+  // for (const x of entries) {
+  //   console.log(x);
+  //   console.log(x[0]);
+  //   console.log(x[1]);
+  //   [key, values] = x;
+  //   console.log(`key=>${key} || Value=> ${values}`)
+  // }
+
+  // const target = { a: 1, b: 2 };
+  // const source = { b: 3, c: 4 };
+
+  // const result = Object.assign(target, source);
+  // console.log(result);
+
+  // const animal = {
+  //   makeSound: function () {
+  //     console.log(this.sound);
+  //   }
+  // };
+
+  // const dog = Object.create(animal);
+  // dog.sound = "woof";
+  // dog.makeSound();
+
+  // const cat = Object.create(animal);
+  // cat.sound = "Meow";
+  // cat.makeSound();
+
+
+  // const vehicle = {
+  //   drive: function () {
+  //     console.log("Driving")
+  //   }
+  // }
+
+  // const car = Object.create(vehicle);
+
+
+  // car.honk = function () {
+  //   console.log("beep-beep")
+  // }
+
+  // car.drive();
+  // car.honk();
+
+
+  // const obj = Object.create(null);
+  // obj.name = "Jais";
+  // console.log(obj.name)
+
+  // const obj = {};
+  // Object.defineProperty(obj, 'name', {
+  //   value: "jais",
+  //   writable: true,
+  //   enumerable: false,
+  //   configurable: true,
+  // })
+
+  // console.log(obj.name);
+  // obj.name = "kush";
+  // console.log(obj.name)
+
+
+  // const obj = {
+  //   prop1: 'value1',
+  //   prop2: 'value2'
+  // };
+  // Object.freeze(obj);
+  // obj.prop1 = 'new value';
+  // console.log(obj.prop1);
+
+  // const obj = {};
+  // const proto = {
+  //   greet: function () {
+  //     console.log('Hello!');
+  //   }
+  // };
+  // Object.setPrototypeOf(obj, proto);
+  // obj.greet(); // Output: Hello!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

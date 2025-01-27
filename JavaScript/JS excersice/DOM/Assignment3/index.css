@@ -1,0 +1,111 @@
+/* Center the main content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin-top: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style for the main container */
+#taskContainer {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Input field for new tasks */
+#taskInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Add button */
+#addTaskBtn {
+  margin-bottom: 10px;
+  background-color: #28a745;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+#addTaskBtn:hover {
+  background-color: #218838;
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  /* Make the item span full width */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+#taskList li div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  /* Ensure child elements span full width */
+}
+
+#taskList li span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#taskList li input[type="checkbox"] {
+  cursor: pointer;
+}
+
+#taskList li p {
+  margin: 0;
+  font-size: 16px;
+  flex-grow: 1;
+  /* Allow task text to expand within the list item */
+}
+
+/* Remove button */
+#taskList li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#taskList li button:hover {
+  background-color: #c82333;
+}
+
+/* Line-through text when checked */
+#taskList li p.checked {
+  text-decoration: line-through;
+  color: #6c757d;
+}

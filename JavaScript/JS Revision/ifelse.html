@@ -1,0 +1,277 @@
+<script>
+
+  // 1. Write a program to check if a number is positive, negative, or zero.
+  /*
+    let num = parseInt(prompt("Enter a number"));
+    // let num = 9;
+  
+    if (num > 0) {
+      document.write("number is positive");
+    }
+  
+    else if (num == 0) {
+      document.write("Number is zero");
+    }
+    else {
+      document.write("number is negative");
+    }
+  */
+
+
+  // Create a function that checks whether a number is even or odd.
+
+  // let num = prompt("Enter a number");
+
+  // if (num % 2 == 0) {
+  //   document.write('Number is even');
+  // }
+
+  // else {
+  //   document.write('Number is odd');
+
+  // }
+
+  // Write a program to check if a person is eligible to vote (age 18 or above).
+
+  // let age = prompt("Enter a number");
+
+  // if (age >= 18) {
+  //   document.write('Eligible');
+  // }
+  // else {
+  //   document.write('Not eligible');
+
+  // }
+
+
+  // Create a function to check if a given character is a vowel or consonant.
+
+  // function check() {
+  //   let char = prompt("Enter a single character:").toLowerCase();
+
+  //   if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+  //     document.write("Vowel");
+  //   } else {
+  //     document.write("Consonant");
+  //   }
+  // }
+
+  // check();
+
+
+  // Write a program that checks if a number is divisible by 5.
+
+  // let num = prompt("Enter a Number");
+
+  // if (num % 5 == 0) {
+  //   document.write('Divisible');
+  // }
+
+  // else {
+  //   document.write('Not Divisible');
+
+  // }
+
+
+
+  // Write a program to find the greatest of two numbers.
+
+  // let num1 = prompt("Enter a number");
+  // let num2 = prompt("Enter a number");
+
+  // if (num1 > num2) {
+  //   console.log("Number1 is greatest");
+  // }
+
+  // else {
+  //   document.write("Number2 is greatest ");
+  // }
+
+
+  // Create a function that checks whether a year is a leap year.
+
+  // function yearCheck() {
+  //   let year = prompt("Enter a number");
+
+  //   if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+  //     document.write('Leap Year');
+  //   }
+  //   else {
+  //     document.write('Not Leap Year');
+  //   }
+  // }
+  // yearCheck();
+
+
+  // Write a program to determine if a number is a multiple of both 3 and 7.
+
+  // let num = prompt("Enter a number");
+
+  // if (num % 3 == 0 && num % 7 == 0) {
+  //   document.write('Multiple');
+  // }
+  // else {
+  //   document.write('Not Multiple');
+  // }
+
+
+  // Write a program to check whether a number is in the range of 1 to 100.
+
+
+  // let num = prompt("Enter a number");
+
+  // if (num >= 1 && num <= 100) {
+  //   document.write('In range');
+  // }
+  // else {
+  //   document.write('Not in range');
+  // }
+
+  // Create a function that checks if a given string is empty.
+
+  // let num = prompt("Enter a number");
+
+  // if (num == "") {
+  //   document.write('Empty');
+  // }
+  // else {
+  //   document.write('Not Empty');
+  // }
+
+
+  // Write a program to check if a number is a three-digit number.
+
+  // let num = prompt("Enter a number");
+
+  // if (num >= 100 && num <= 999) {
+  //   document.write('Three-digit');
+  // }
+
+  // else {
+  //   document.write('Not three-digit');
+  // }
+
+
+
+  // Create a function that takes three numbers and checks which one is the largest.
+
+  // let num1 = prompt("Enter a number");
+  // let num2 = prompt("Enter a number");
+  // let num3 = prompt("Enter a number");
+
+
+  // if (num1 > num2 && num1 > num3) {
+  //   document.write('Num1 is largest');
+  // }
+  // else if (num2 > num3 && num2 > num1) {
+  //   document.write('Num2 is largest');
+  // }
+  // else {
+  //   document.write('Num3 is largest');
+  // }
+
+
+  // Write a program to check if a number is divisible by both 2 and 5.
+
+  // let num = prompt("Enter a number");
+
+  // if (num % 2 == 0 && num % 5 == 0) {
+  //   document.write('Divisible');
+  // }
+  // else {
+  //   document.write('Not divisible');
+  // }
+
+  // Create a program that checks if a student has passed or failed (pass mark is 40).
+
+  // let marks=prompt("ENter a number");
+
+  // if(marks>=40){
+  //   document.write('Passed');
+  // }
+
+  // else{
+  //   document.write('failed');
+  // }
+
+
+  // Write a program to check if the temperature is above or below freezing (0°C).
+
+
+
+  // let marks = prompt("Enter a number");
+
+  // if (marks >= 40) {
+  //   document.write('Passed');
+  // }
+
+  // else {
+  //   document.write('failed');
+  // }
+
+
+  // Create a function that checks whether a username and password match predefined values.
+
+  // let Username = prompt("Enter a username");
+  // let Password = prompt("Enter a Passowrd");
+
+  // if (Username === "jais" && Password == 123) {
+  //   document.write('Matched');
+  // }
+  // else {
+  //   document.write('Not matched');
+  // }
+
+
+  // Write a program to check if a given day is a weekend (Saturday or Sunday).
+
+
+  // let day = (prompt("Enter a day")).toLowerCase();
+
+  // if (day == "saturday" || day == "sunday") {
+  //   document.write('Weekends');
+  // }
+  // else {
+  //   document.write('Weekdays');
+  // }
+
+  // Write a program to compare two strings and check if they are equal.
+
+  // let str1 = "jasi";
+  // let str2 = "kush";
+
+  // if (str1 === str2) {
+  //   document.write('Equal');
+  // }
+  // else {
+  //   document.write('Not equal');
+  // }
+
+
+  // Create a function that checks if a person is eligible for a senior citizen discount (age 60 or above).
+
+  // let age = 89;
+
+  // if (age >= 60) {
+  //   document.write('Discount');
+  // }
+
+  // else {
+  //   document.write('No discount');
+  // }
+
+  // Write a program to determine if a number is odd and greater than 10.
+
+  // let num = prompt("Enter a number");
+
+  // if (num % 2 != 0 && num > 10) {
+  //   document.write('valid');
+  // }
+  // else {
+  //   document.write('Not valid');
+
+  // }
+
+
+
+</script>

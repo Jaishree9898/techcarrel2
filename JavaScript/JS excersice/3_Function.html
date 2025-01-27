@@ -1,0 +1,310 @@
+<script>
+  // 1. Define a function named square that has an integer parameter n, return square of n.
+
+  function square(n) {
+    return n * n;
+  }
+
+  // console.log(square(5));
+
+  // 2. Define a function simple_ interest that takes three parameters p,r,t of type float and return simple interest using these parameters.
+
+  function SI(p, r, t) {
+    return (p * r * t) / 100;
+  }
+
+  // console.log(SI(2000, 5, 12));
+
+  // 3. Define a function named fahrenheit_to_ celsius that takes only one parameter name f which takes temperature in Fahrenheit degree and return temperature in Celsius degree.
+
+  function fahrenheit_to_celsius(f) {
+    return (c = ((f - 32) * 5) / 9);
+  }
+  // console.log(fahrenheit_to_celsius(62));
+
+  // 4. Define a function named gross_salary that takes a parameter named sal for salary of type float and return gross salary where hra 40 % and da 20 % of sal.
+
+  let HRA = 0.4;
+  let DA = 0.2;
+
+  function gross_salary(sal) {
+    return (gross_salary = sal + sal * HRA + sal * DA);
+  }
+
+  // console.log(gross_salary(20000));
+
+  // 5. Define a function named leap_year that takes a parameter named year of type int and return 1 if year is leap year otherwise return 0 year % 4 == 0 && year % 100 != 0 || year %400 == 0.
+
+  function leapYear(year) {
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  // console.log(leapYear(1991));
+
+  // 6. Define these functions :Addition of two numbers
+
+  function add(a, b) {
+    return a + b;
+  }
+  // console.log(add(2, 3));
+
+  // 6. Define these functions : Subtraction of two numbers
+
+  function sub(a, b) {
+    return a - b;
+  }
+  // console.log(sub(2, 3));
+
+  // 6. Define these functions: Multiply of two numbers
+
+  function mul(a, b) {
+    return a * b;
+  }
+  // console.log(mul(2, 3));
+
+  // 6. Define these functions: Division of two numbers
+
+  function div(a, b) {
+    return a / b;
+  }
+  // console.log(div(2, 3));
+
+  // 7. Define a function that takes three integer parameter a,b,c respectively and returns largest of them and a, b, c contains different values.
+
+  function large(a, b, c) {
+    if (a > b && a > c) {
+      return a;
+    } else if (b > a && b > c) {
+      return b;
+    } else {
+      return c;
+    }
+  }
+
+  // console.log(large(1, 2, 3));
+
+  // 8. Define a function named factorial that takes only one parameter of type integer named n that returns factorial of the given parameter n.
+  let fact = 1;
+
+  function factorial(n) {
+    for (let i = 1; i <= n; i++) {
+      fact *= i;
+    }
+    return fact;
+  }
+  // console.log(factorial(5));
+
+  // 9. Define a function power that takes two parameter named a , b and return a raised to power of b.
+
+  let pow = 1;
+  function power(a, b) {
+    for (i = 1; i <= b; i++) {
+      pow *= a;
+    }
+    return pow;
+  }
+
+  // console.log(power(4, 3));
+
+  // 10. Define a function that take three parameters a, b, c respectively and solve quadratic equation then if possible then return solution of equation therwise simply print the solution.
+
+  // let x, y;
+
+  // function quadraticEquation(a, b, c) {
+
+  //   x = (-b + Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
+  //   y = (-b - Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
+  //   console.log(`x=${x}, y=${y}`);
+  // }
+
+  // quadraticEquation(1, 6, 2);
+
+
+  //Correctb way to do quadratic equation: formula is (-b (+-)SQRT((b*b)-4ac))/2a;
+
+
+  let x,y;
+  function quadraticEquation(a,b,c){
+
+    const discriminant=(b*b)-(4*a*c);
+    if(discriminant<0){
+        document.write(`No real roots`);
+    }
+
+    x = (-b + Math.sqrt(discriminant)) / (2 * a);
+    y = (-b - Math.sqrt(discriminant)) / (2 * a);
+    document.write(`x=${x}, y=${y}`);
+
+  }
+
+  quadraticEquation(1,-6,5);
+  quadraticEquation(1,-6,5);
+  quadraticEquation(1,-6,5);
+  quadraticEquation(1,-6,5);
+
+ 
+
+
+
+  // 11. Define a function sum_digits_of_number that takes a number n as parameter and return the sum of its digit.
+
+  // let sum = 0;
+  function sum_digits(n) {
+    for (let i = n; i != 0; i = parseInt(i / 10)) {
+      digit = i % 10;
+      sum += digit;
+    }
+    return sum;
+  }
+
+  // console.log(sum_digits(12345));
+
+  // 12. Define a function prime that takes a number as parameter and return 1 it number is prime otherwise return 0.
+
+  function prime(num) {
+    for (i = 2; i < num; i++) {
+      if (num % i == 0) {
+        break;
+      }
+    }
+    if (i == num) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // console.log(prime(6));
+
+  // 13. Define a function that takes radius and calculate area & circumference and both to the caller of function.
+  let A, C;
+
+  function areaCircumference(r) {
+    A = (Math.PI * r * r).toFixed(2);
+    C = (2 * Math.PI * r).toFixed(2);
+    // console.log(`Area of a circle=${A} and Circumference of a circle= ${C}`);
+  }
+
+  areaCircumference(4);
+
+  // 14. Define a function named swap for swapping i.e. void swap(int *a , int *b)
+
+  let temp;
+
+  function swap(a, b) {
+    temp = a;
+    a = b;
+    b = temp;
+    // console.log(`a=${a} and b=${b}`);
+  }
+  swap(2, 3);
+
+  // 15. Define a function roman for convert number into roman number m 1000 d 500 c 100 l 50  x 10 v 5i 1 e.g 1988 mdcccclxxxviii.
+  
+  let result=0;
+ 
+  function convertor(num){
+    if(num>=1000){
+      let q=num/1000;
+      for(i=1; i<=q; i++){
+        result+="M";
+      }
+      let r=num%1000;
+      if(r>=500){
+        let q=r/100;
+        result+="D";
+        let r=q-5;
+        for(i=1; i<=r; i++){
+          result+="C";
+          if(r>=50){
+            let q=r/10;
+            result+="L";
+            let r=q-5;
+            for(i=1; i<=r; i++){
+              result+=X;
+            }
+
+            s
+            if(r>=5){
+              let q=r/1;
+              result+="V";
+              let r=q-5;
+              for(i=1; i<=r; i++){
+                result_="I";
+              }
+            }
+
+          }
+
+        }
+      }
+      else{
+        let q=r/100;
+        for(i=1; i<=q; i++){
+          result+=C;
+        }
+      }
+
+      }
+
+
+
+  }
+
+  console.log(convertor(2998));
+
+
+
+
+  // 16. Define a function that takes a number as parameter and return octal of that number.
+
+  // 17. Define a function for finding whether the given number is perfect number of not. Input : 6 factors of 6 : 1, 2, 3 sum of these factors are same as original number that means it is perfect number.
+
+  let sum2 = 0;
+
+  function perfectNum(num) {
+    for (let i = 1; i < num; i++) {
+      if (num % i == 0) {
+        sum2 += i;
+      }
+    }
+    if (sum2 == num) {
+      // return console.log(`${num} is a perfect number`);
+    } else {
+      // return console.log(`${num} is not a perfect number`);
+    }
+  }
+
+  perfectNum(3);
+  perfectNum(28);
+  perfectNum(6);
+  // perfectNum(21)wrong
+
+  // 18. Define a function that takes a number as parameter and display table of the number..
+
+  function table(n) {
+    for (let i = 1; i <= 10; i++) {
+      // console.log(`${n}*${i}=${n*i}`);
+    }
+  }
+
+  table(13);
+
+  // 19. Define a function to display Ascii character with their values.
+
+  // 20. Define a function that takes a number as parameter and finds out largest digit.
+
+  // 21. Define a function that takes a number as parameter and finds out smallest digit.
+
+  // 22. Define a function to print all Armstrong number that’s comes between1 to 500 and also print how many they are.
+
+  // 23. Define a function to find HCF (GCD) of two numbers.
+
+  // 24. Write a program to input a number and find out binary of the number.
+
+  // 25. Define a function that takes a binary of number as parameter and print decimal of it.
+
+</script>

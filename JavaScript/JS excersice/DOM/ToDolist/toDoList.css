@@ -1,0 +1,128 @@
+/* // <!-- DOM & BOM Manipulation
+// Objective
+// The goal of this assignment is to develop a simple, interactive web page that utilizes both DOM and BOM manipulation. This will help you understand how JavaScript interacts with HTML elements and browser properties.
+
+// Requirements
+// Create a single HTML page with embedded JavaScript. The page should meet the following criteria:
+
+// Part 1: DOM Manipulation
+// Create a To-Do List Application
+
+// Add an input box and a button that says "Add Task."
+// When a user types a task in the input box and clicks "Add Task":
+// The task should appear as a new item in a list below the input.
+// Each list item should have a "Delete" button to remove the task.
+// Each list item should have a checkbox to mark it as completed. When checked, the item’s text should appear crossed out.
+// Interactive Styling
+
+// Add a button that says "Toggle Dark Mode."
+// When clicked, it should toggle between a light and dark theme for the page.
+// Use JavaScript to change CSS styles directly to achieve this.
+// Real-Time Clock
+
+// Add a section to display the current time.
+// Use JavaScript to update this clock every second without reloading the page.
+// Part 2: BOM Manipulation
+// Browser Information Display
+
+// Create a section on the page that displays the following information about the user's browser:
+// Browser name (e.g., Chrome, Firefox)
+// Browser version
+// Screen width and height
+// URL of the current page
+// Page Redirection
+
+// Add a button that says "Go to Google."
+// When clicked, it should redirect the user to https://www.google.com.
+// Alert and Confirm
+
+// Create a button labeled "Submit Assignment."
+// When clicked, it should first show a confirmation dialog box (confirm).
+// If the user confirms, display an alert saying "Assignment Submitted!"
+// If the user cancels, display an alert saying "Submission Canceled."
+// Bonus Challenges (Optional)
+// Save To-Do List in Local Storage
+
+// Use the localStorage API to save the tasks so that they persist even if the page is refreshed.
+// Window Resizing Event
+
+// Display the current window size (width and height) at the bottom of the page.
+// Update this display every time the user resizes the window.
+// Submission Requirements
+// Submit the HTML file with embedded JavaScript code. Ensure that the page functions correctly when opened in any modern browser.
+
+// Grading Criteria
+// Functionality: Each feature works as specified.
+// Code Quality: Code is well-structured and properly commented.
+// UI Design: User interface is clean and intuitive. --> */
+* {
+  align-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.body {
+  background-color: rgb(34, 32, 32);
+  color: white;
+}
+
+.div {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-right: 300px;
+  margin-left: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.check {
+  grid-column: 1;
+}
+
+.span {
+  grid-column: 2;
+}
+
+.deleteBtn {
+  grid-column: 3;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.toggle {
+  padding: 5px 10px;
+  margin: 15px;
+}
+
+input {
+  padding: 5px 10px;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#date {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+#browserInfo,
+#windowHW {
+  margin-top: 15px;
+  margin-left: 320px;
+  margin-right: 320px;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  margin-bottom: 15px;
+}
+

@@ -1,0 +1,128 @@
+/* 1. Write a JavaScript program that dynamically creates a list of items and appends them to a specific HTML element on
+the page. Each item in the list should include a title, a description, and a button that allows users to remove the item
+from the list. Additionally, when an item is clicked, it should highlight that item by changing its background color.
+
+Requirements
+HTML Setup:
+
+Provide an empty div element in the HTML file with the ID listContainer. This will be the container where the list items
+will be added.
+Add a button with the ID addItemBtn that, when clicked, will add a new item to the list.
+
+<body>
+  <div id="listContainer"></div>
+  <button id="addItemBtn">Add Item</button>
+  <script src="script.js"></script>
+</body>
+JavaScript Functionality:
+
+Create a JavaScript function called addItem() that:
+Creates a new item element each time it is called.
+Each item should contain:
+A title (e.g., "Item 1", "Item 2").
+A description (e.g., "Description of Item 1").
+A "Remove" button to delete the item.
+Use the DOM API methods like document.createElement, appendChild, and setAttribute to add the new elements.
+Adding and Removing Items:
+
+The "Add Item" button should call the addItem() function each time it is clicked, adding a new item to the
+listContainer.
+The "Remove" button on each item should remove that specific item from the list.
+Highlighting an Item:
+
+Add an event listener to each item so that when it is clicked, its background color changes, indicating it’s selected.
+Ensure that only one item is highlighted at a time. When a new item is clicked, it should remove the highlight from any
+previously selected item.
+Styling:
+
+Apply basic CSS styling for the list items and the highlighted state.
+For example, you could make the highlighted item have a different background color, and add padding and margin to
+separate each item.
+Expected Outcome
+Each time the "Add Item" button is clicked, a new item should appear in the listContainer.
+Each item should display a title, description, and a "Remove" button.
+When the "Remove" button is clicked, the respective item should be removed from the listContainer.
+Clicking on an item should highlight it, and only one item should be highlighted at any time.
+Submission Requirements
+Provide the complete HTML, CSS, and JavaScript code in separate files.
+Ensure the code is commented to explain each section.
+Include a screenshot of the working assignment interface showing multiple items, with one item highlighted. */
+
+* {
+  align-items: center;
+  text-align: center;
+}
+
+button,
+input {
+  padding: 5px 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.listCSS {
+  margin-top: 25px;
+  border-top: 0.005rem solid rgb(202, 188, 188);
+  border-bottom: 0.005rem solid rgb(202, 188, 188);
+  border-left: 0.005rem solid rgb(202, 188, 188);
+  border-right: 0.005rem solid rgb(202, 188, 188);
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.liCSS {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.cell1,
+.cell2,
+.cell3 {
+  padding: 25px 10px;
+  width: 33.33%;
+  margin-top: 3px;
+}
+
+.cell1 {
+  text-align: start;
+  margin: 5px;
+}
+
+.cell2 {
+  text-align: center;
+}
+
+.cell3 {
+  text-align: end;
+}
+
+.cell3 button {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.even {
+  background-color: rgb(151, 192, 151);
+  border: none;
+}
+
+.odd {
+  background-color: rgb(214, 212, 212);
+}
+
+.highlight {
+  background-color: yellowgreen;
+}

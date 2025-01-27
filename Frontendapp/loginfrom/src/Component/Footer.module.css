@@ -1,0 +1,11 @@
+
+.footer {
+  display: block;
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 90px;
+}
+

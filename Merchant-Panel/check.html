@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Rating Component</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f5f5f5;
+    }
+
+    .rating-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      width: 350px;
+    }
+
+    .rating-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .stars {
+      display: inline-flex;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .stars-bg {
+      display: flex;
+      color: #e5e7eb;
+      font-size: 24px;
+    }
+
+    .stars-display {
+      display: flex;
+      color: #fbbf24;
+      position: absolute;
+      top: 0.5rem;
+      left: 0;
+      overflow: hidden;
+      width: 0%;
+      white-space: nowrap;
+      font-size: 24px;
+    }
+
+    .star {
+      padding-right: 4px;
+    }
+
+    .stars-input {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .star-input {
+      width: 28px;
+      height: 36px;
+      opacity: 0;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+    }
+
+    .rating-value {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .rating-text {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+
+    .rating-stats {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .stat-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-stars {
+      min-width: 100px;
+      font-size: 0.875rem;
+      color: #374151;
+    }
+
+    .stat-bar {
+      flex-grow: 1;
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .stat-fill {
+      height: 100%;
+      background: #fbbf24;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
+    .stat-count {
+      min-width: 60px;
+      font-size: 0.875rem;
+      color: #6b7280;
+      text-align: right;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    .star-input:hover~.stars-display {
+      animation: pulse 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rating-container">
+    <div class="rating-wrapper">
+      <!-- Interactive Star Rating -->
+      <div class="stars">
+        <!-- Background Stars -->
+        <div class="stars-bg">
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+        </div>
+        <!-- Filled Stars -->
+        <div class="stars-display">
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+        </div>
+        <!-- Input Stars -->
+        <div class="stars-input">
+          <input type="radio" class="star-input" name="rating" value="1" title="1 star">
+          <input type="radio" class="star-input" name="rating" value="2" title="2 stars">
+          <input type="radio" class="star-input" name="rating" value="3" title="3 stars">
+          <input type="radio" class="star-input" name="rating" value="4" title="4 stars">
+          <input type="radio" class="star-input" name="rating" value="5" title="5 stars">
+        </div>
+      </div>
+
+      <!-- Rating Text -->
+      <div>
+        <div class="rating-value">4.8 out of 5</div>
+        <div class="rating-text">2,547 global ratings</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Star Rating Functionality
+    const starsDisplay = document.querySelector('.stars-display');
+    const starInputs = document.querySelectorAll('.star-input');
+    const ratingValue = document.querySelector('.rating-value');
+    const starWidth = 28; // Width of each star including padding
+
+    // Set initial rating
+    function setInitialRating(rating) {
+      const width = (rating / 5) * 100;
+      starsDisplay.style.width = `${width}%`;
+      ratingValue.textContent = `${rating} out of 5`;
+    }
+
+    // Initialize with 4.8 rating
+    setInitialRating(4.8);
+
+    // Handle star hover and click
+    starInputs.forEach((input, index) => {
+      const starPosition = index + 1;
+
+      input.addEventListener('mouseover', () => {
+        const width = (starPosition / 5) * 100;
+        starsDisplay.style.width = `${width}%`;
+      });
+
+      input.addEventListener('mouseout', () => {
+        // Restore to selected rating or initial rating
+        const selectedInput = document.querySelector('input[name="rating"]:checked');
+        const rating = selectedInput ? selectedInput.value : 4.8;
+        setInitialRating(rating);
+      });
+
+      input.addEventListener('click', () => {
+        const width = (starPosition / 5) * 100;
+        starsDisplay.style.width = `${width}%`;
+        ratingValue.textContent = `${starPosition} out of 5`;
+      });
+    });
+
+    // Handle hover on entire rating component
+    const starsInput = document.querySelector('.stars-input');
+    starsInput.addEventListener('mousemove', (e) => {
+      const rect = starsInput.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const starCount = Math.ceil(x / starWidth);
+      const width = (starCount / 5) * 100;
+
+      if (starCount > 0 && starCount <= 5) {
+        starsDisplay.style.width = `${width}%`;
+      }
+    });
+  </script>
+</body>
+
+</html>

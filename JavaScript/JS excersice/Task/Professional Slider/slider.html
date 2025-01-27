@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <link rel="stylesheet" href="./slider.css">
+</head>
+
+<body>
+  <h1>You are now a <span id="profession-name"></span></h1>
+  <main id="slider-container">
+    <button class="prev" id="prev-btn">❮</button>
+    <div class="card-container">
+      <div id="card1" class="card"></div>
+      <div id="card2" class="card"></div>
+      <div id="card3" class="card"></div>
+    </div>
+    <button class="next" id="next-btn">❯</button>
+  </main>
+  <div class="dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+  </div>
+
+  <script src="./slider.js"></script>
+</body>
+
+</html>

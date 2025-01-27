@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./photo.css">
+</head>
+
+<body>
+  <header>
+    <h1>Interactive Photo Gallery</h1>
+  </header>
+
+  <!-- Form to Add New Photo -->
+  <div class="form-container">
+    <label for="photoURL">Image URL: </label>
+    <input type="text" id="photoURL" placeholder="Enter Image URL">
+    <label for="category">Category: </label>
+    <select id="category">
+      <option value="nature">Nature</option>
+      <option value="city">City</option>
+      <option value="people">People</option>
+    </select>
+    <button id="addPhotoButton">Add Photo</button>
+  </div>
+
+  <!-- Filter Photos by Category -->
+  <div class="filter-container">
+    <label for="filter">Filter by Category: </label>
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="nature">Nature</option>
+      <option value="city">City</option>
+      <option value="people">People</option>
+    </select>
+  </div>
+
+  <!-- Photo Gallery Section -->
+  <section id="gallery">
+    <!-- Dynamic photos will be added here -->
+  </section>
+
+
+
+</body>
+<script src="./photo.js"></script>
+
+</html>

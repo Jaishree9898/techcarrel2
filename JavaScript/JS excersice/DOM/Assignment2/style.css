@@ -1,0 +1,72 @@
+/* Assignment 2: Browser Information and Popup Handling Using BOM
+Objective
+This assignment will help you understand how to use the Browser Object Model (BOM) to interact with the browser's environment. You will learn how to detect browser details, handle popups, and manage basic event handling using BOM properties and methods.
+
+Assignment Description
+Write a JavaScript program that interacts with the browser environment using the BOM. You will create a system that detects the user's browser and displays information about the browser, such as the name, version, and screen resolution. Additionally, you will create a basic popup system that allows users to open and close a new window.
+
+Requirements
+Browser Information Display:
+
+Use the BOM to detect the user's browser name and version.
+Also, retrieve the screen resolution (width and height).
+Display this information on the page inside a div with the ID browserInfo.
+Your output should include:
+
+Browser Name (e.g., "Chrome", "Firefox", etc.)
+Browser Version (e.g., "93.0.4577.82")
+Screen Resolution (e.g., "1920x1080")
+Popup Window Handling:
+
+Create a button that opens a new popup window when clicked.
+The popup window should display a simple message, e.g., "Hello from the popup window!".
+The popup window should be of a specific size (e.g., 400x300).
+Add a button inside the popup that, when clicked, will close the popup.
+Event Handling for Popup:
+
+When the popup window is opened, display a confirmation message on the main page saying "Popup opened!".
+After the popup is closed (using the close button), display a message saying "Popup closed!" on the main page.
+Additional Functionalities (Optional):
+
+Add a button to check if the user is currently online or offline (using navigator.onLine). Display an alert based on their current connection status.
+Bonus: If the user is offline, suggest they reconnect by showing a message on the page that changes when their connection status changes.
+Example Code Structure (Without Solution)
+html
+Copy code
+<body>
+   <div id="browserInfo"></div>
+   <button id="openPopupBtn">Open Popup</button>
+
+   <script src="script.js"></script>
+</body>
+In your script.js, you will:
+
+Write functions to fetch the browser's details.
+Implement popup window functionality.
+Add event listeners to manage popup interactions.
+Expected Outcome
+The user's browser information should be displayed on the page.
+A popup window should open when the button is clicked, showing a simple message and providing a way to close it.
+Event handling should be in place to show messages when the popup opens and closes.
+An optional online/offline status check could enhance the functionality.
+Submission Requirements
+Provide the complete HTML, CSS (optional), and JavaScript code in separate files.
+Ensure the code is properly commented to explain each section of functionality.
+Include a screenshot of the page showing the browser information and the popup window in action. */
+
+* {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 15px;
+}
+
+.browserInfo {
+   background-color: lightgray;
+   padding: 10px;
+   margin: 15px;
+   border-radius: 5px;
+   border: 1px solid rgb(228, 215, 215);
+}
+
+h2 {
+   color: green;
+}

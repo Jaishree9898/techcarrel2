@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .invalid {
+      border: 1px solid red !important;
+    }
+
+
+    input {
+      border: 1px solid grey;
+      border-radius: 4px;
+      outline: none;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Student Form</h1>
+  <form action="">
+    <label for="">User Name</label>
+    <input type="text" placeholder="Enter UserName" required id="uName"><br>
+
+    <label for="">Password</label>
+    <input type="password" name="" id="password" placeholder="Enter password"><br>
+
+
+    <label for="">Full Name</label>
+    <input type="text" placeholder="Enter First Name" id="name"><br>
+
+
+    <label for="">DOB</label>
+    <input type="date" name="" id="date"><br>
+
+    <label for="">Email Id</label>
+    <input type="email" placeholder="Enter Email" id="email" required><br>
+
+    <label for="">Mobile Number</label>
+    <input type="text" placeholder="" id="mobileNum"><br>
+
+    <label for="">Roll Number</label>
+    <input type="text" name="" id="rollNum"><br>
+
+    <button>Submit</button>
+  </form>
+
+</body>
+<script>
+
+
+
+  let inputName = document.querySelector('#name');
+
+  function removeCharAt(str, index) {
+    return str.slice(0, index) + str.slice(index + 1);
+  }
+
+  inputName.addEventListener('input', (e) => {
+
+    if (!/^[a-zA-Z\s]*$/.test(inputName.value)) {
+      inputName.classList.add('invalid');
+
+    }
+    else {
+      inputName.classList.remove('invalid')
+    }
+  })
+
+
+
+  let inputMobileNum = document.querySelector('#mobileNum');
+
+  inputMobileNum.addEventListener('input', (e) => {
+    if (isNaN(inputMobileNum.value)) {
+      alert("Enter correct Mobile Number");
+      // inputMobileNum.value = '';
+      let newMobileNum = removeCharAt(inputMobileNum.value, inputMobileNum.value.length - 1);
+      inputMobileNum.value = newMobileNum;
+
+    }
+  })
+
+
+  inputRollNum = document.querySelector('input', (e) => {
+    if (isNaN(inputRollNum.value)) {
+      alert("Enter correct Mobile Number");
+      // inputRollNum.value = '';
+      let newRollNum = removeCharAt(inputRollNum.value, inputRollNum.value.length - 1);
+      inputRollNum.value = newRollNum;
+
+    }
+
+  })
+
+
+  let btn = document.querySelector('button');
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+  })
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,172 @@
+<script>
+  //   Exercise: Validating and Handling Errors in a Number Input
+  // Objective:
+  // Write a JavaScript function that takes a user-provided number as input and validates it using try and catch. The function should:
+  // Ensure the input is a valid number.
+  // Check if the number falls within a specified range.
+  // Handle any validation errors gracefully.
+  // Instructions:
+  // Define the function validateNumber(input).
+  // This function should accept one parameter, input, which is expected to be a number.
+  // Convert and Validate the Input:
+  // Use try-catch to handle errors in case the input is not a valid number.
+  // If the input is not a valid number, throw an error with the message: "Invalid number input".
+  // Range Check:
+
+  // If the input is a valid number, check that it falls within the range of 1 to 100.
+  // If the number is out of range, throw an error with a message:
+  // "Number out of range (1-100)"  // Return a Success Message:
+
+  // If the input is valid and within range, return a success message: "Valid number: <input>".
+  // Catch and Handle Errors:
+
+  // Use catch to handle any errors thrown during validation. Return the error message instead of throwing it.
+
+  // let input = "Enter a Number";
+
+  // function validateNumber(input) {
+  //   try {
+  //     if (typeof input == "number") {
+  //       console.log(`Valid Number: ${input}`)
+  //     }
+
+  //     else {
+  //       Number(input);
+  //       console.log(`Valid Number: ${input}`)
+  //     }
+
+  //   } catch (error) {
+  //     console.log(`Invalid Number: ${input}`)
+  //   }
+
+  //   if (input >= 1 && input <= 100) {
+  //     console.log(`Valid Number ${input}`)
+
+  //   }
+  //   else {
+  //     console.log("Number is out of range ")
+  //   }
+
+  // }
+
+  // validateNumber(9);
+
+
+  // Correct way of this excersise:
+  // function validateNumber(input) {
+  //   try {
+  //     // Step 1: Convert the input to a number
+  //     let number = Number(input);
+
+  //     // Step 2: Check if input is a valid number
+  //     if (isNaN(number)) {
+  //       throw new Error("Invalid number input");
+  //     }
+
+  //     // Step 3: Check if the number is within the range 1-100
+  //     if (number < 1 || number > 100) {
+  //       throw new Error("Number out of range (1-100)");
+  //     }
+
+  //     // Step 4: Return success message
+  //     return Valid number: ${number};
+  //   } catch (error) {
+  //     // Handle parsing and validation errors
+  //     return error.message;
+  //   }
+  // }
+
+  // // Testing the function with example inputs
+  // console.log(validateNumber(50));        // Expected Output: "Valid number: 50"
+  // console.log(validateNumber(150));       // Expected Output: "Number out of range (1-100)"
+  // console.log(validateNumber("hello"));   // Expected Output: "Invalid number input"
+  // console.log(validateNumber(-10));       // Expected Output: "Number out of range (1-100)"
+
+
+
+  // Suppose you have a function that validates a user’s age. You want to throw a specific error if the age is less than 18.
+
+  // function validateAge(age) {
+  //   try {
+  //     if (age < 18) {
+  //       throw new Error("Less than 18 years old")
+  //     }
+  //     return "Age is Valid";
+  //   }
+  //   catch (error) {
+  //     return error.message;
+  //   }
+  // }
+
+  // console.log(validateAge(18));
+  // console.log(validateAge(13));
+
+  // You can throw any JavaScript value, not just Error objects. For instance, you might throw a string, number, or custom object to signal different types of issues.
+
+  // function calculateSquareRoot(num) {
+  //   try {
+  //     if (num < 0) {
+  //       throw "Can not calculate";
+  //     }
+  //     return Math.sqrt(num)
+  //   }
+  //   catch (error) {
+  //     return error;
+  //   }
+  // }
+  // console.log(calculateSquareRoot(-1));
+
+
+  // class NegativeNumberError extends Error {
+  //   constructor(message) {
+  //     this.name = "NegativeNumber";
+
+  //   }
+  // }
+
+  // function calculateSquareRoot(num) {
+  //   try {
+  //     if (num < 0) {
+  //       throw new NegativeNumberError("Negatvie number");
+  //     }
+  //     return Math.sqrt(num);
+  //   } catch (error) {
+  //     if (error instanceof NegativeNumberError) {
+  //       return error.message;
+  //     }
+  //     else {
+  //       throw error;
+  //     }
+  //   }
+  // }
+
+  // console.log(calculateSquareRoot(16));
+
+  // Question: Write a function safeDivide that takes two numbers and returns their division. If the second number is zero, it should throw an error with the message "Cannot divide by zero." Use a try...catch block to handle the error when calling this function.
+
+  // const safeDrive = (num1, num2) => {
+  //   try {
+  //     if (num2 == 0) {
+  //       throw new Error("Cannot divide by zero")
+  //     }
+  //     return num1 / num2;
+
+  //   }
+  //   catch (error) {
+  //     return error.message;
+  //   }
+  // }
+
+  // console.log(safeDrive(4, 0));
+
+
+
+
+
+
+
+
+
+
+
+</script>

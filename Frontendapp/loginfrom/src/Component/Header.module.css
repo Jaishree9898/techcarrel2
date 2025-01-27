@@ -1,0 +1,16 @@
+.tclogo{
+ width: 65px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.tc{
+  font-size: 50px;
+  font-weight: 500;
+}
+
+

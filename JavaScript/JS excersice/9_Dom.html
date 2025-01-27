@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- <div id="colorBox" style="height: 200px;"></div>
+  <button>Click Here</button> -->
+
+  <!-- <div id="listContainer"></div> -->
+
+  <!-- <ul id="itemList"></ul> -->
+
+  <!-- <form action="submit">
+    <label for="">Name </label><input type="text">
+    <button>Submit</button>
+  </form> -->
+
+  <!-- <div id="mainList"></div> -->
+
+  <div id="textContainer">
+    <p>Hello 1</p>
+    <p>Hello 2</p>
+    <p>Hello 3</p>
+    <p>Hello 4</p>
+    <p>Hello 5</p>
+  </div>
+</body>
+<script>
+  //     DOM Exercise Questions
+  // 1. Basic DOM Manipulation
+  // Write a function that changes the background color of a <div> with the id 'colorBox' to a random color each time a button is clicked. Use JavaScript to:
+  // 1. Select the <div> and button.
+  // 2. Add a click event listener to the button.
+  // 3. Change the background color of the <div> on each button click.
+
+  // Expected Output:
+  // Each time the button is clicked, the <div>'s background color changes randomly.
+
+  // const randomColor = function () {
+  //   let hex = '0123456789ABCDEF';
+  //   let color = '#';
+  //   for (let i = 0; i < 6; i++) {
+  //     color += hex[Math.floor((Math.random() * 16))];
+  //     console.log(color);
+  //   }
+  //   return color;
+  // };
+
+  // let btn = document.querySelector('button');
+  // btn.addEventListener('click', () => {
+  //   document.getElementById('colorBox').style.backgroundColor = randomColor();
+
+  // })
+
+  // 2. Dynamic Content Creation
+  // Write a JavaScript function that takes an array of strings as input and creates an unordered list (<ul>) with each string as a list item (<li>). Append the generated list to an empty <div> with the id 'listContainer'.
+  // Example:
+  // const items = ['Apple', 'Banana', 'Cherry'];
+  // Expected Output:
+  // A <ul> with <li> items for each fruit in the 'items' array displayed inside the 'listContainer' <div>.
+
+  // const items = ['Apple', 'Banana', 'Cherry'];
+
+  // let list = document.getElementById('listContainer');
+  // let uoList = document.createElement('ul');
+  // list.appendChild(uoList);
+
+  // for (let i = 0; i < items.length; i++) {
+  //   let oList = document.createElement('li');
+  //   uoList.appendChild(oList);
+  //   oList.textContent = items[i];
+  // }
+
+
+  // console.log(list)
+
+
+
+  // 3. Event Delegation
+  // Given a list of items generated dynamically, add an event listener using event delegation to log the text content of each clicked item. Use an empty <ul> element with the id 'itemList', then populate it with 10 <li> items in JavaScript, each labeled 'Item 1' through 'Item 10.' Use event delegation to handle clicks on any item.
+  // Expected Output:
+  // When an <li> item is clicked, its content ('Item 1', 'Item 2', etc.) is logged in the console.
+
+
+  // let ul = document.getElementById('itemList');
+
+  // for (let i = 0; i < 10; i++) {
+  //   let li = document.createElement('li');
+  //   ul.appendChild(li);
+  //   let liC = li.textContent = "Item" + "  " + [i];
+  //   li.addEventListener('click', (e) => {
+  //     console.log(liC)
+  //   })
+  // }
+
+
+
+
+  // 4. DOM Traversal
+  // // Write a function that takes an element ID as an argument and logs all child elements of that element. The function should also list each child's tag name and ID (if present). Use an HTML structure with nested <div> elements to test the function.
+  // Example HTML:
+  // <div id='parent'>
+  // <div id='child1'>
+  // <span id='grandchild1'>Hello</span>
+  // </div>
+  // <div id='child2'></div>
+  // </div>
+  // Expected Output:
+  // Logs each child and grandchild, their tag names, and IDs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // 5. Form Handling
+  // Create a simple form with an input field for entering a name and a button to submit. When the button is clicked, display the name entered by the user in an alert box and clear the input field. Use JavaScript to handle the button click and to prevent the default form submission behavior.
+  // Expected Output:
+  // The entered name is shown in an alert box, and the input field is cleared after the button is clicked.
+
+
+  // let form = document.querySelector('form');
+
+  // form.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+  //   let input = document.querySelector('input');
+  //   alert(input.value);
+  //   input.value = '';
+  // });
+
+
+
+
+
+
+
+
+  // 6. Updating and Removing Elements
+  // Write JavaScript code that does the following:
+  // 1. Creates a list of five items and appends it to a <div> with the id 'mainList'.
+  // 2. Adds a 'Remove' button next to each list item.
+  // 3. When the 'Remove' button is clicked, the corresponding list item is deleted.
+  // Expected Output:
+  // Each list item has a 'Remove' button that deletes the item from the list when clicked.
+
+  // let div = document.getElementById('mainList');
+
+  // for (let i = 0; i < 5; i++) {
+  //   let li = document.createElement('li');
+  //   li.textContent = "Item" + " " + [i] + "  ";
+
+  //   let btn = document.createElement('button');
+  //   btn.textContent = "  " + "Remove"
+
+  //   li.appendChild(btn);
+  //   div.appendChild(li);
+
+  //   btn.addEventListener("click", () => {
+  //     div.removeChild(li);
+  //   })
+  // }
+
+  // 7. Interactive CSS Styles
+  // Write a JavaScript function that adds a hover effect to all <p> elements within a <div> with the id 'textContainer'. When a <p> element is hovered over, change its font size to 20px and text color to blue; when the mouse leaves, revert to the original style.
+  // Expected Output:
+  // Each <p> element changes style on hover, then reverts when the mouse is no longer over it.
+
+  // let para = document.querySelectorAll('p');
+  // // console.log(para)
+
+  // para.forEach((e) => {
+  //   e.addEventListener('mouseover', () => {
+  //     e.style.fontSize = "20px";
+  //     e.style.color = "blue";
+  //   })
+  // })
+
+  // para.forEach((e) => {
+  //   e.addEventListener('mouseout', () => {
+  //     e.style.fontSize = "";
+  //     e.style.color = "";
+  //   })
+  // })
+
+
+
+
+
+
+
+</script>
+
+</html>

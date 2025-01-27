@@ -1,0 +1,404 @@
+<script>
+
+  // 1. Write a program to input a number and find out the factorial of the number.
+
+  // let num=prompt("Entr a number");
+
+  // let fact=1;
+
+  // for(let i=1; i<=num; i++){
+  //   fact*=i;
+  // }
+
+  // document.write(fact);
+
+  // let num = 6;
+  // let fact = 1;
+
+  // for (let i = 1; i <= num; i++) {
+  //   fact *= i;
+  // }
+  // console.log(fact);
+
+
+  // 2. Write a program to input two numbers and store into two variables named a, b respectively
+  // and calculate the a power b.
+
+
+  // let a = prompt("Enter a");
+  // let b = prompt("Enter b");
+  // let pow = 1;
+
+  // for (let i = 1; i <= b; i++) {
+  //   pow = pow * a;
+  // }
+  // document.write(pow);
+
+
+
+  // 3. Write a program to print all leap year that comes between 1950 to 2021 and print all leap years. hint year %4 ==0 && year %100 != 0 || year % 400 ==0
+
+  // let yStart = 1950;
+  // let yEnd = 2021
+
+
+  // for (let y = yStart; y <= yEnd; y++) {
+  //   if (y % 4 == 0 && y%100!=0 || y%400==0) {
+  //     document.write(`${y} <br>`);
+  //   }
+  // }
+
+
+
+
+  // 4. Write a program to count how many leap years comes between 1950 to 2021 and print all leap years.
+
+  // let yStart = 1950;
+  // let yEnd = 2021
+  // let count = 0;
+
+
+  // for (let y = yStart; y <= yEnd; y++) {
+  //   if (y % 4 == 0 && y%100!=0 || y%400==0) {
+  //     count++;
+  //   }
+  // }
+  // document.write(`${count} <br>`);
+
+
+  // 5. Write a program to input 10 integer numbers and find out the sum of all given numbers.
+
+  // let totalSum = 0;
+
+  // for (let i = 0; i < 10; i++) {
+  //   let number = parseInt(prompt(`Enter number ${i + 1} `));
+  //   totalSum = totalSum + number;
+  // }
+  // document.write(`${totalSum}`);
+
+  // 6. Write a program to input N integer numbers and find out the product of all given numbers.
+
+
+  // let totalProduct = 1;
+  // let n = prompt("Enter a number")
+
+  // for (let i = 0; i < n; i++) {
+  //   let number = parseInt(prompt(`Enter number ${i + 1} `));
+  //   totalProduct = totalProduct * number;
+  // }
+  // document.write(`${totalProduct}`);
+
+
+  // 7. Write a program to input a number and print all the digits of the given number.
+
+
+  // let num=parseInt(prompt("Enter a number"));
+  // for(let t=num; t!=0; t=parseInt(t/10)){
+  //     let digit=t%10;
+  //     document.writeln(digit);
+
+  // }
+
+
+
+  // 8. Write a program to input a number and find out the sum of its digits.
+
+  // let num=parseInt(prompt("Enter a number:"));
+  // let totalSum=0;
+
+  // for(let i=num; i!=0; i=parseInt(i/10)){
+  //   let digit=i%10;
+  //   totalSum=totalSum+digit;
+  // }
+  // document.write(`${totalSum}`);
+
+
+  // 9. Write a program to calculate product of digits of a number.
+
+
+  // let num = parseInt(prompt("Enter a number"));
+  // let product = 1;
+
+  // for (let i = num; i != 0; i = parseInt(i / 10)) {
+  //   let digit = i % 10;
+  //   product = product * digit;
+
+  // }x
+  // document.write(product);
+
+
+
+  // 10. Write a program to input a number and find out how many digits in the number.
+
+  // let num = parseInt(prompt("Enter a number"));
+  // let count = 0;
+
+  // for (let i = num; i != 0; i = parseInt(i / 10)) {
+  //   let digit = i % 10;
+  //   count++;
+  // }
+  // document.write(count);
+
+  // 11. Write a program to input a number and find out that is Armstrong number or not. e.g. 153 = 1 pow 3 + 5 pow 3 + 3 pow 3.
+
+
+  // let num = parseInt(prompt("Enter a number"));
+  // let newNum = 0;
+
+  // for (let i = num; i != 0; i = parseInt(i / 10)) {
+  //   let digit = i % 10;
+  //   newNum = newNum + (digit * digit * digit);
+
+
+  // }
+
+  // if (newNum == num) {
+  //   document.write(`Entered number is ${num} <br> New Number is${newNum}: <br> Number is armstrong`);
+  // }
+  // else {
+  //   document.write(`Entered number is ${num} <br> New Number is${newNum}: <br> Number is not armstrong`);
+  // }
+
+
+  // 12. Write a program to input a number and a digit from the keyboard and find out digit is present in the number or not.
+
+  // let num = parseInt(prompt("Enter a number"));
+  // document.write(`Number is ${num} <br>`);
+  // let eDigit = parseInt(prompt("Enter a digit"));
+  // document.write(`eDigit is ${eDigit} <br>`);
+
+  // let isPresent = false;
+  // for (let i = num; i != 0; i = parseInt(i / 10)) {
+  //   digit = i % 10;
+  //   if (digit == eDigit) {
+  //     isPresent = true;
+  //   }
+  // }
+
+  // if (isPresent == true) {
+  //   document.write(`Number is present`);
+  // }
+  // else {
+  //   document.write(`Number is not present`);
+  // }
+
+
+  // 13. Write a program to input a number and a digit from the keyboard and count how many times it comes in the number.
+
+  // let num = parseInt(prompt("Enter a number"));
+  // let eDigit = parseInt(prompt("Enter a digit"));
+  // let isPresent = false;
+  // let count = 0;
+
+  // for (let i = num; i != 0; i = parseInt(i / 10)) {
+  //   let digit = i % 10;
+
+  //   if (digit == eDigit) {
+  //     isPresent = true;
+  //     count++;
+  //   }
+
+  // }
+  // document.write(count);
+
+
+
+
+  // 14. Write a program to input a number and print table of given number.
+
+  // let num = parseInt(prompt("Enter a number"));
+
+  // for (let i = 1; i <= 10; i++) {
+  //   document.write(`${num}*${i}=${num * i} <br>`);
+  // }
+
+  // 15. Write a program to input n numbers and print product of all numbers.
+
+  // let n = prompt("Enter a number");
+  // let totalProduct = 1;
+
+  // for (let i = 0; i < n; i++) {
+  //   let num = parseInt(prompt(`Enter a number: ${i + 1}`));
+  //   totalProduct = totalProduct * num;
+  // }
+
+  // document.write(totalProduct);
+
+  // 16. Write a program to input n numbers and find out largest number.
+
+  // let n = prompt("Enter a number");
+
+  // for (let i = 0; i < n; i++) {
+  //   let num = parseInt(prompt(`Enter a number: ${i + 1}`));
+
+  // }
+
+  // 17. Write a program to display the n terms of harmonic series and their sum 1 + 1/2 + 1/3 + 1/4 + 1/5 ... 1/n.
+
+  // let n = prompt("Enter a number")
+  // let sum = 1;
+
+  // for (let i = 1; i <= n; i++) {
+  //   sum = (sum + (1 / i));
+  // }
+  // document.write(`${sum}`);
+
+
+
+  // 18. Write a program to check whether a given number is a perfect number or no.  // A number is a perfect number if is equal to the sum of its proper divisors, that is, the sum of its positive divisors excluding the number itself. In this article, we will see how to check if a number is a perfect number or not in JavaScript.
+
+  // let num = prompt("Enter a number");
+  // let sum = 0;
+  // for (let i = 1; i < num; i++) {
+  //   if (num % i == 0) {
+  //     sum += i;
+
+  //   }
+  // }
+
+  // if (sum == num) {
+  //   document.write(`Number is perfect`);
+  // }
+  // else {
+  //   document.write(`Number is not perfect`);
+  // }
+
+
+  // 19. Write a program to find Strong Number.
+  // A number is called strong number if sum of the factorial of its digit is equal to number itself.
+  // For example: 145
+  // since
+  // 1! + 4! + 5! = 1 + 24 + 120 = 145
+
+  // let num = prompt("Enter a number");
+  // document.write(`Number=${num}<br>`);
+  // let sum = 0;
+
+  // for (let i = num; i != 0; i = parseInt(i / 10)) {
+  //   digit = parseInt(i % 10);
+  //   let fact = 1;
+  //   document.writeln(`digit=${digit} <br>`);
+
+  //   for (let j = 1; j <= digit; j++) {
+  //     fact = fact * j;
+  //   }
+
+  //   document.writeln(`fact=${fact} <br>`);
+  //   sum += fact;
+  // }
+
+  // document.write(`sum=${sum}<br>`);
+
+  // if (sum == num) {
+  //   document.write(`Number is strong`);
+  // }
+  // else {
+  //   document.write(`Number is not strong`);
+  // }
+
+
+
+  // 20. 1! + 2! + 3! + 4! + 5! + ... + n!
+
+
+  // let n = parseInt(prompt("Enter a number"))
+  // let sum = 0;
+
+  // for (let i = 1; i <= n; i++) {
+  //   let fact = 1;
+
+
+  //   for (let j = 1; j <= i; j++) {
+  //     fact *= j;
+  //   }
+  //   sum += fact;
+  // }
+
+  // document.write(sum);
+
+  // 21. (1!/1) + (2!/2) + (3!/3) + (4!/4) + (5!/5) + ... + (n!/n);
+
+  // let n = parseInt(prompt("Enter a number"))
+  // let sum = 0;
+
+  // for (let i = 1; i <= n; i++) {
+  //   let fact = 1;
+
+
+  //   for (let j = 1; j <= i; j++) {
+  //     fact *= j;
+
+  //   }
+  //   let divide = fact / i;
+  //   sum += divide;
+  // }
+
+  // document.write(sum);
+
+
+  // 22. [(11)/1] + [(22)/2] + [(33)/3] + [(44)/4] + [(55)/5] + ... + [(nn)/n];
+
+  // let n = parseInt(prompt("Enter a number"));
+  // let a = 11;
+  // let divide;
+  // let sum = 0;
+
+  // for (let i = 1; i <= n; i++) {
+  //   divide = parseInt(a / i);
+  //   a = a + 11;
+  //   sum += divide;
+
+  // }
+  // document.write(sum);
+
+
+  // 23. [(11)/1!] + [(22)/2!] + [(33)/3!] + [(44)/4!] + [(55)/5!] + ... + [(nn)/n!];
+
+  // let n = parseInt(prompt("Enter a number"));
+  // let a = 11;
+  // let divide;
+
+  // let sum = 0;
+
+  // for (let i = 1; i <= n; i++) {
+  //   a = a + 11;
+  //   let fact = 1;
+  //   for (let j = 1; j <= i; j++) {
+  //     fact *= j;
+  //   }
+  //   divide = parseInt(a / fact);
+
+  //   sum += divide;
+
+  // }
+
+  // document.write(sum);
+
+
+
+
+  // 24. 1/2 - 2/3 + 3/4 - 4/5 + 5/6 - ...... n
+
+
+  // let n = parseInt(prompt("Enter a number"));
+  // let sum = 0;
+  // let divide;
+
+  // for (let i = 1; i <= n; i++) {
+  //   divide = parseInt(i / i++);
+  //   if (i % 2 != 0) {
+  //     sum += divide;
+  //   }
+  //   else {
+  //     sum -= divide;
+  //   }
+
+  // }
+
+  // document.write(sum);
+
+
+
+
+
+</script>

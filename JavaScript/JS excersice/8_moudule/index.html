@@ -1,0 +1,47 @@
+<script>
+  // Question: Given an array of products where each product is an object with properties name, category, and price, write functions to:
+  // Filter products by a given category.
+  // Find the most expensive product.
+  // Calculate the average price of all products.
+
+  let products = [
+    {
+      name: "AC",
+      category: "Electronics",
+      price: 50000,
+    },
+    {
+      name: "Fridge",
+      category: "Electronics",
+      price: 40000,
+    },
+    {
+      name: "Chair",
+      category: "Furniture",
+      price: 50000,
+    },
+    {
+      name: "Tabel",
+      category: "Furniture",
+      price: 8000,
+    }
+  ];
+
+
+
+
+  function filterByCategory() {
+    return (
+      products.filter(products => products.category === category)
+    )
+  }
+
+
+  console.log(filterByCategory(products, "Electronics"))
+
+
+
+
+
+
+</script>

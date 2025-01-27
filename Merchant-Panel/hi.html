@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .star-rating {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .star {
+      font-size: 2rem;
+      color: #ccc;
+      /* Default (unfilled) star color */
+      position: relative;
+    }
+
+    .star::before {
+      content: '★';
+      color: #ffd700;
+      /* Filled star color */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="star-rating" id="star-rating">
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+  </div>
+  <p>Rating: <span id="rating-value">0</span></p>
+  <script>
+
+  </script>
+</body>
+
+</html>

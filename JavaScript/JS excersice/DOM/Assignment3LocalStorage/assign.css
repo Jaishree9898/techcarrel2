@@ -1,0 +1,78 @@
+/* Assignment 3: Task Manager with Local Storage
+Objective
+This assignment will help you understand how to use the Web Storage API, specifically Local Storage, to persist data on the client-side. You will create a task manager that allows users to add, remove, and manage tasks, with the data stored in Local Storage so it persists across page reloads.
+
+Assignment Description
+Write a JavaScript program that functions as a task manager. Users should be able to:
+
+Add tasks.
+Mark tasks as completed.
+Remove tasks.
+Store the tasks in Local Storage, so that they persist even when the page is refreshed.
+Requirements
+HTML Setup:
+
+Create an input field for the task name and a button to add the task.
+Below the input, display a list of tasks in an unordered list (<ul>). Each task should have:
+The task name.
+A checkbox to mark it as completed.
+A button to remove the task from the list.
+Example structure:
+
+<body>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button id="addTaskBtn">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script src="script.js"></script>
+</body>
+JavaScript Functionality:
+
+Use Local Storage to save tasks, so they persist across page reloads.
+The list of tasks should be loaded from Local Storage when the page is loaded, and new tasks should be saved to Local Storage when added.
+Each task should have a checkbox that allows the user to mark it as completed. When checked, the task should visually change (e.g., strike-through text) and the completion status should be stored in Local Storage.
+Each task should have a "Remove" button that deletes it from both the list and Local Storage.
+Managing Tasks:
+
+When the "Add Task" button is clicked, the new task should be added to the list and saved to Local Storage.
+When the checkbox of a task is checked or unchecked, update the completion status in Local Storage.
+When the "Remove" button is clicked, the task should be deleted from both the DOM and Local Storage.
+Optional Features:
+
+Add a filter to show only "Completed" tasks or "Pending" tasks.
+Allow the user to edit a task by clicking on it and updating the text.
+Example Code Structure (Without Solution)
+// Example code skeleton for script.js
+
+document.getElementById("addTaskBtn").addEventListener("click", function () {
+    // Write the logic to add a task
+});
+
+function loadTasks() {
+    // Fetch tasks from Local Storage and display them in the list
+}
+
+function addTaskToLocalStorage(task) {
+    // Save task to Local Storage
+}
+
+function removeTaskFromLocalStorage(taskId) {
+    // Remove task from Local Storage
+}
+
+function toggleTaskCompletion(taskId) {
+    // Update task completion status in Local Storage
+}
+
+Expected Outcome
+The task manager should allow users to add, remove, and mark tasks as completed.
+The tasks should persist in Local Storage and remain available after the page is reloaded.
+The UI should update when tasks are marked as completed, and the Local Storage data should reflect this change.
+Submission Requirements
+Provide the complete HTML, CSS (optional), and JavaScript code in separate files.
+The code should be well-commented to explain how each section works.
+Include a screenshot of the working task manager interface with tasks displayed, marked as completed, and deleted. */
+
+.task-name.completed {
+  text-decoration: line-through;
+  }

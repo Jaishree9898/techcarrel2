@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-Sliding Cards</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .slider {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .card {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      height: 300px;
+      flex-shrink: 0;
+      min-width: 100%;
+    }
+
+    .card:nth-child(1) {
+      background-color: #ff6f61;
+    }
+
+    .card:nth-child(2) {
+      background-color: #6f9fff;
+    }
+
+    .card:nth-child(3) {
+      background-color: #61ff85;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    #prev {
+      margin-left: 20px;
+    }
+
+    #next {
+      margin-right: 20px;
+    }
+
+    .buttons button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 5px;
+      outline: none;
+      opacity: 0.8;
+    }
+
+    .buttons button:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slider">
+    <div class="slides">
+      <div class="card" id="card1">Card 1</div>
+      <div class="card" id="card2">Card 2</div>
+      <div class="card" id="card3">Card 3</div>
+    </div>
+    <div class="buttons">
+      <button id="prev">&lt;</button>
+      <button id="next">&gt;</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const cards = document.querySelectorAll('.card');
+    const totalSlides = cards.length;
+
+    let index = 0;
+
+    const nextSlide = () => {
+      index = (index + 1) % totalSlides; // Loop back to the first slide after the last
+      updateSlider();
+    };
+
+    const prevSlide = () => {
+      index = (index - 1 + totalSlides) % totalSlides; // Loop back to the last slide before the first
+      updateSlider();
+    };
+
+    const updateSlider = () => {
+      // Adjusting the transform to move the cards correctly
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    // Auto-play functionality
+    let autoplay = setInterval(nextSlide, 3000); // Slide every 3 seconds
+
+    // Pause on hover
+    document.querySelector('.slider').addEventListener('mouseenter', () => {
+      clearInterval(autoplay);
+    });
+
+    document.querySelector('.slider').addEventListener('mouseleave', () => {
+      autoplay = setInterval(nextSlide, 3000);
+    });
+
+    // Buttons
+    document.getElementById('next').addEventListener('click', nextSlide);
+    document.getElementById('prev').addEventListener('click', prevSlide);
+  </script>
+
+</body>
+
+</html>

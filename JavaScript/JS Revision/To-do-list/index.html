@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f4f4f4;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="table-container"></div>
+
+  <script>
+    // Sample data
+    const data = [
+      { Name: "John Doe", Age: 28, Profession: "Developer" },
+      { Name: "Jane Smith", Age: 34, Profession: "Designer" },
+      { Name: "Sam Wilson", Age: 23, Profession: "Tester" }
+    ];
+
+    // Function to create a table
+    function createTable(data) {
+      // Get table container
+      const container = document.getElementById('table-container');
+
+      // Create table element
+      const table = document.createElement('table');
+
+      // Create table header
+      const thead = document.createElement('thead');
+      const headerRow = document.createElement('tr');
+
+      Object.keys(data[0]).forEach(key => {
+        const th = document.createElement('th');
+        th.textContent = key;
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      // Create table body
+      const tbody = document.createElement('tbody');
+      data.forEach(rowData => {
+        const row = document.createElement('tr');
+        Object.values(rowData).forEach(cellData => {
+          const td = document.createElement('td');
+          td.textContent = cellData;
+          row.appendChild(td);
+        });
+        tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+
+      // Append the table to the container
+      container.appendChild(table);
+    }
+
+    // Generate the table
+    createTable(data);
+  </script>
+</body>
+
+</html>
